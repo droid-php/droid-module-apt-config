@@ -1,0 +1,24 @@
+project:
+    name: "droid/apt-config"
+    description: "Configure Apt"
+
+variables:
+    apt_config:
+        - ["APT::Periodic::Update-Package-Lists", "1"]
+
+tasks:
+    -
+      name: "Create /etc/apt/apt.conf"
+      command: "fs:touch"
+      sudo: true
+      arguments:
+          file: "/etc/apt/apt.conf"
+    -
+      name: "Write configuration to /etc/apt/apt.conf"
+      command: "fs:setline"
+      sudo: true
+      arguments:
+          file: "/etc/apt/apt.conf"
+          option-name: "{{{ item.0 }}}"
+          option-value: "{{{ item.1 }}};"
+      with_items: apt_config
