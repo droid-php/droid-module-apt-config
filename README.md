@@ -1,4 +1,4 @@
-# Droid Module: droid/apt-config
+# Droid Module: apt-config
 
 Configure Apt. This module will configure Apt to permit the packaged cron jobs
 to trigger automatic updates of the package lists. This configuration may be

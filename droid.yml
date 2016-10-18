@@ -1,6 +1,4 @@
-project:
-    name: "droid/apt-config"
-    description: "Configure Apt"
+description: "Configure Apt"
 
 variables:
     apt_config:
