@@ -1,6 +1,7 @@
 description: "Configure Apt"
 
 variables:
+    use_legacy_templating: true
     apt_config:
         - ["APT::Periodic::Update-Package-Lists", "1"]
 
